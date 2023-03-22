@@ -1,6 +1,7 @@
 import encoder as encoder
 import decoder as decoder
 
+
 def main():
     option = 0
     while option != 3:
