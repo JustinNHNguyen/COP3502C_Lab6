@@ -24,7 +24,8 @@ def main():
             password = encode(password)
             print("Your password has been encoded and stored!\n")
         elif option == 2:
-            decode(password)
+            decoded = decode(password)
+            print("The encoded password is " + password + ", and the original password is " + decoded + ".\n")
 
 
 if __name__ == '__main__':
