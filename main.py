@@ -1,14 +1,5 @@
-# By: Justin Nguyen
-
-def encode(password):
-    encoded = ""
-    for i in range(0, len(password)):
-        if int(password[i]) > 6:
-            encoded += str((int(password[i]) + 3) % 10)
-        else:
-            encoded += str(int(password[i])+3)
-    return str(encoded)
-
+import encoder as encoder
+import decoder as decoder
 
 def main():
     option = 0
@@ -21,10 +12,10 @@ def main():
         option = int(input("Please enter an option: "))
         if option == 1:
             password = input("Please enter your password to encode: ")
-            password = encode(password)
+            password = encoder.encode(password)
             print("Your password has been encoded and stored!\n")
         elif option == 2:
-            decoded = decode(password)
+            decoded = decoder.decode(password)
             print("The encoded password is " + password + ", and the original password is " + decoded + ".\n")
 
 
